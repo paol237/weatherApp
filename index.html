@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metéo</title>
+  <a href="https://www.flaticon.com/free-icons/water" title="water icons"></a>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="header">
+    <a href="index.html" id="logo">Baguel<span>Dev</span></a>
+    <a href="index.html" id="appName">WeatherApp</a>
+  </div>
+  
+  <div class="container">
+    <div class="content">
+      <div class="input-content">
+        <input id="input" type="text" placeholder="enter country name">
+        <button id="btn"><i class='bx bx-search'></i></button>
+      </div>
+
+      <div class="information-content">
+        <div class="information-detail">
+          <div class="name">
+            <p id="info"><i class='bx bx-map'></i></p>
+            <p id="date">date:</p>
+          </div>
+          <div class="image">
+          <img id="img" src="" alt="">
+            <p id="img-description"></p>
+          </div>
+        </div>
+
+        
+        <div id="prediction"></div>
+
+        <div id="dayDetail"></div>
+
+        <div id="message"></div>
+        <div id="forecast">
+          
+        </div>
+        
+      </div>
+
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
