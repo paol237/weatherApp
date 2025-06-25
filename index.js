@@ -25,7 +25,7 @@ btn.addEventListener("click", function () {
 
 // ✅ Météo actuelle
 function fetchCurrentWeather(searchItems) {
-  const urlObj = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${encodeURIComponent(
+  const urlObj = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${encodeURIComponent(
     searchItems
   )}`;
 
@@ -76,7 +76,7 @@ function fetchCurrentWeather(searchItems) {
 // ✅ Prévisions
 async function fetchData(ville) {
   try {
-    const urlObj2 = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${encodeURIComponent(
+    const urlObj2 = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${encodeURIComponent(
       ville
     )}&days=6`;
     const reponse = await fetch(urlObj2);
