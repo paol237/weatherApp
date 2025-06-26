@@ -1,5 +1,10 @@
+
+
+
 const waterIcon = "drop.png";
+const light = "light.png"
 const apiKey = "ea8d9941c1084e47bdc81138252406";
+const bodyEl = document.body
 
 const info = document.getElementById("info");
 const date = document.getElementById("date");
@@ -62,9 +67,16 @@ function fetchCurrentWeather(searchItems) {
       descirption.innerHTML = data.current.condition.text;
 
       if (data.current.cloud >= 80 || data.current.humidity >= 70) {
-        message.innerHTML = `<p>Prenez un parapluie avant de sortir et couvrez-vous bien 🌧️</p>`;
+        message.innerHTML = `<p>Take an umbrella and a sweater before going out 🌧️</p>`;
+        bodyEl.style.background = 'url("rain.png")'
+        bodyEl.style.backgroundPosition ='center';
+        bodyEl.style.backgroundSize= 'cover';
       } else {
-        message.innerHTML = `<p>Ne vous surchargez pas trop d'habits, il fait chaud dehors 🌤️</p>`;
+        message.innerHTML = `<p>Don't overload yourself with too many clothes 🌤️</p>`;
+        bodyEl.style.background = `url(${light})`;
+         bodyEl.style.backgroundPosition ='center';
+        bodyEl.style.backgroundSize = 'cover';
+        bodyEl.style.backgroundRepeat= 'no-repeat'
       }
     })
     .catch((error) => {
