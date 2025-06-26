@@ -52,16 +52,16 @@ function fetchCurrentWeather(searchItems) {
       date.innerHTML += `${data.location.localtime}; ${data.location.tz_id}`;
 
       prediction.innerHTML = `
-        <span>humidité <br><b>${data.current.humidity}%</b></span>
-        <span>température <br><b>${data.current.temp_c}°C</b></span>
-        <span>ressentie <br><b>${data.current.feelslike_c}°C</b></span>
-        <span>rosée <br><b>${data.current.dewpoint_c ?? "N/A"}°C</b></span>
-        <span>vent <br><b>${data.current.wind_kph}kph</b></span>
+        <span>humidity <br><b>${data.current.humidity}%</b></span>
+        <span>temperature <br><b>${data.current.temp_c}°C</b></span>
+        <span>felt <br><b>${data.current.feelslike_c}°C</b></span>
+        <span>dew <br><b>${data.current.dewpoint_c ?? "N/A"}°C</b></span>
+        <span>wind <br><b>${data.current.wind_kph}kph</b></span>
         <span>direction <br><b>${data.current.wind_dir}</b></span>
-        <span>degré vent <br><b>${data.current.wind_degree}°</b></span>
-        <span>rafale <br><b>${data.current.gust_kph}kph</b></span>
-        <span>pression <br><b>${data.current.pressure_mb}</b></span>
-        <span>nuages <br><b>${data.current.cloud}%</b></span>`;
+        <span>wind degree <br><b>${data.current.wind_degree}°</b></span>
+        <span>gust <br><b>${data.current.gust_kph}kph</b></span>
+        <span>pressure <br><b>${data.current.pressure_mb}</b></span>
+        <span>clouds <br><b>${data.current.cloud}%</b></span>`;
 
       image.src = `https:${data.current.condition.icon}`;
       descirption.innerHTML = data.current.condition.text;
